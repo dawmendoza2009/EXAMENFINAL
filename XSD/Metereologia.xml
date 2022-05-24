@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metereologia xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="MetereologiaXSD.xsd">
+	<provincias>
+    </provincias>
+    <comunidaAutonoma>
+
+    </comunidaAutonoma>
+    <poblacion>
+        <fecha></fecha>
+        <temperatura-maxima></temperatura-maxima>
+        <temperatura-minima></temperatura-minima>
+        <probabilidadlluvia></probabilidadlluvia>
+        <avisos></avisos>
+    </poblacion>
+					
+</metereologia>
