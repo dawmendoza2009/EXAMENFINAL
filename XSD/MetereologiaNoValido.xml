@@ -4,9 +4,9 @@ xsi:noNamespaceSchemaLocation="MetereologiaXSD.xsd">
 	<comunidades>
         <comunidaAutonoma nombre="Leon">
             <provincias>
-                <provincia nombre="Madrids">
+                <provincia nombre="Madrid">
                     <poblaciones>
-                        <poblacion nombre="Alcobendas">
+                        <!-- <poblacion nombre="Alcobendas">
                             <fecha>2022-12-05</fecha>
                             <temperatura-maxima>ww</temperatura-maxima>
                             <temperatura-minima>ww</temperatura-minima>
@@ -15,7 +15,8 @@ xsi:noNamespaceSchemaLocation="MetereologiaXSD.xsd">
                                 <aviso>Viento</aviso>
                                 <aviso>Nieve</aviso>                               
                             </avisos>
-                        </poblacion>
+                        </poblacion> -->
+                       
                     </poblaciones>       
                 </provincia>
     
