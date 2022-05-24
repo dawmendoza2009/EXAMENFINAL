@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+	<xs:element name="metereologia">
+		<xs:complexType>
+			<xs:sequence>
+			<xs:element name="comunidades" minOccurs="0" maxOccurs="unbounded">
+			<xs:complexType>
+			<xs:sequence>
+				<xs:element name="comunidaAutonoma"  minOccurs="1" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="provincias" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="provincia"  minOccurs="1" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="poblaciones">
+													<xs:complexType>
+														<xs:sequence>
+															<xs:element ref="poblacion" />															 
+														</xs:sequence>
+													</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												
+										<!--definición de atributo Provincia-->
+										<xs:attribute name="nombre" type="xs:string" use="required"/>
+											</xs:complexType>
+										</xs:element>																							
+										 
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<!--definición de atributo CCAA-->
+						<xs:attribute name="nombre" type="xs:string" use="required"/>
+					</xs:complexType>
+				</xs:element>
+				
+				</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			</xs:sequence>
+
+		</xs:complexType>
+	</xs:element>
+
+
+	<!-- Elemento población -->
+<xs:element name="poblacion">
+	<xs:complexType>
+ 	<xs:sequence>
+	<xs:element name="fecha" type="xs:date"/>	
+	<xs:element name="temperatura-maxima" type="xs:string"/>	
+	<xs:element name="temperatura-minima" type="xs:string"/>
+	<xs:element name="probabilidadlluvia" type="xs:string"/>
+	<xs:element name="avisos" type="xs:string" minOccurs="0" maxOccurs="10">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="aviso"></xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>															 
+	</xs:sequence>
+	<!--definición de atributo CCAA-->
+	<xs:attribute name="nombre" type="xs:string" use="required"/>
+ </xs:complexType>
+</xs:element>
+	
+ <!--RESTRINCIONES:-->
+	<!-- restrinción para el código de producto y cliente-->
+	<xs:simpleType name="avisos">
+		<xs:restriction base="xs:string">
+			<!--el patrón se compone de 3 letras de la A a la Z mayúsculas, guión, 2 letras, guión y 4 números-->
+			<xs:pattern value="hombre|muje"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>
