@@ -1,0 +1,47 @@
+
+.contenedor {
+    display: flex;       
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+    
+}
+ article{
+    border: 1px solid #000;
+    width: 400px;
+ }
+
+ .capa3{
+
+ }
+ /* tamaño telefono */
+ @media (max-width: 600px) {
+    .contenedor {
+        display: flex;       
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        flex-wrap: wrap;
+        
+    }
+    article{
+        border: 1px solid #000;
+        width: 200px;
+     }
+  }
+  /* tamaño tableta */
+  @media (max-width: 900px) {
+    .contenedor {
+        display: flex;       
+        /* width: 50%; */
+        margin-left: auto;
+        margin-right: auto;
+       
+      
+    }
+    article{
+        border: 1px solid #000;
+        width: 100px;
+     }
+  }
